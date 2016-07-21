@@ -28,7 +28,7 @@ import bds
 import game
 import preGame
 
-TOKEN = '123881753:AAEQXNdXS9fMLIFjzlVkpQw9mMd40vvChBw'
+TOKEN = '239286324:AAGX7v7K6XgqXuywK7jU6o9i35zmVLLbJW8'
 
 BASE_URL = 'https://api.telegram.org/bot' + TOKEN + '/'
 
@@ -158,17 +158,17 @@ class WebhookHandler(webapp2.RequestHandler):
                 if checkChat(chat_id):
                     reply(esp='loucura')
                 if enabled:
-                    reply('forca_bot já esta ligado. Conheça o @playhangmanbot a nova versão do seu bot de jogo da forca! :)')
+                    reply('forca_bot já esta ligado.')
                 else:
-                    reply('Olá, eu sou o forca_bot!\n Uma nova versão está disponível: Conheça o @playhangmanbot a nova versão do seu bot de jogo da forca! :).\nPara começar um novo jogo digite /novojogo')
+                    reply('Olá, eu sou o forca_bot!\nPara começar um novo jogo digite /novojogo')
                     setEnabled(chat_id, True)
                     if (inPreGame or inGame):
                         reply('Já existe um jogo em andamento, se quiser é só continuar jogando')
             elif text.startswith('/stop'):
                 if not enabled:
-                    reply('forca_bot já esta desligado. Conheça o @playhangmanbot a nova versão do seu bot de jogo da forca! :)')
+                    reply('forca_bot já esta desligado.')
                 else:
-                    reply('forca_bot desligado. Conheça o @playhangmanbot a nova versão do seu bot de jogo da forca! :)')
+                    reply('forca_bot desligado.')
                     setEnabled(chat_id, False)
             else:
                 if enabled:
