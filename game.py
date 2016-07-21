@@ -113,11 +113,11 @@ class Jogo:
                         rpl.append(str1)
                     else:
                         rpl.append('Não forma chutas letras ainda!')
-                elif text.startswith('/rank') or text.startswith('/rank@forca_bot'):
+                elif text.startswith('/rank') or text.startswith('/rank@DilemaForcaBot'):
                     rpl.append(emoji_coroa+'RANKING'+emoji_coroa)
                     rank = getRank(chat_id)
                     rpl.append(rank)
-                elif text.startswith('/cancelar') or text.startswith('/cancelar@forca_bot'):
+                elif text.startswith('/cancelar') or text.startswith('/cancelar@DilemaForcaBot'):
                     if uId == adm or (uId == '115277582' and chat_id == '-25285256'):
                         str1 = 'O administrador cancelou o jogo'
                         cleanGame(chat_id)
